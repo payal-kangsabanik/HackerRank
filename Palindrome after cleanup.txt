@@ -1,0 +1,12 @@
+s=input()
+s2=[]
+for i in s:
+    if i.isalnum():
+        s2.append(i)
+result=''.join(s2)
+new=result.lower()
+rev=new[::-1]
+if rev==new:
+    print("YES")
+else:
+    print("NO")
