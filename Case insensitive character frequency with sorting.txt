@@ -1,0 +1,16 @@
+s=input()
+new_s=[]
+for i in s:
+    if i.isalnum():
+        new_s.append(i.lower())
+
+sortedlist=sorted(new_s,key=lambda item:ord(item))
+counted = []
+for i in sortedlist:
+    if i not in counted:
+        count = 0
+        for c in sortedlist:
+            if i == c:
+                count += 1
+        counted.append(i)
+        print(i,":",count)

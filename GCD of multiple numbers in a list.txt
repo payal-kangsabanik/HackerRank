@@ -1,0 +1,14 @@
+n = int(input())
+numbers = list(map(int, input().split()))
+min_num=min(numbers)
+
+gcd=1
+for i in range (min_num,0,-1):
+    count=0
+    for j in range(n):
+        if numbers[j]%i==0:
+            count=count+1
+    if count==n:
+        gcd=i
+        break
+print(gcd)
