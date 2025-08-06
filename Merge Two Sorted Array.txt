@@ -1,0 +1,11 @@
+n= int(input())
+arr=list(map(int,input().split()))
+m= int(input())
+arr1=list(map(int,input().split()))
+merged=arr+arr1
+length=len(merged)
+for i in range(0,length):
+    for j in range(i,length):
+        if merged[i]>=merged[j]:
+            merged[i],merged[j]=merged[j],merged[i]
+print(*merged)
