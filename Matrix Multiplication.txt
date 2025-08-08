@@ -1,0 +1,22 @@
+p, q, r = map(int, input().split())
+A = []
+for _ in range(p):
+    row = list(map(int, input().split()))
+    A.append(row)
+B = []
+for _ in range(q):
+    row = list(map(int, input().split()))
+    B.append(row)
+C = []
+for i in range(p):
+    row = []
+    for j in range(r):
+        row.append(0)
+    C.append(row)
+for i in range(p):         
+    for j in range(r):     
+        for k in range(q): 
+            C[i][j] += A[i][k] * B[k][j]
+
+for row in C:
+    print(*row)
